@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import StoryList from './views/StoryList.vue'
 import StoryDetails from './views/StoryDetails.vue'
 import NewStories from './views/NewStories.vue'
+import NotFound from './views/NotFound.vue'
 
 const routes = [
     {
@@ -19,6 +20,11 @@ const routes = [
         name: 'NewStories',
         component: NewStories,
     },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: NotFound,
+    }
 ]
 
 export default createRouter({
